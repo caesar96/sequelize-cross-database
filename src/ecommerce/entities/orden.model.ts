@@ -12,4 +12,7 @@ export class Orden extends Model {
   @ForeignKey(() => Usuario)
   @Column
   IdUsuario: number;
+
+  @BelongsTo( () => Usuario, 'IdUsuario')
+  usuario: Usuario
 }

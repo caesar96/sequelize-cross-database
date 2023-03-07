@@ -16,7 +16,6 @@ export const databaseProviders = [
 				password: 'fullmoon96',
 				database: 'global',
 				models: [Usuario, Orden],
-				// schema: 'global',
 			});
 			// sequelize.getQueryInterface().showIndex()
 

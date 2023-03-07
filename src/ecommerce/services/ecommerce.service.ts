@@ -12,7 +12,7 @@ export class EcommerceService {
 
   async findAll(): Promise<Orden[]> {
     return Orden.findAll({
-      include: [{ model: Usuario, as: 'customer' }],
+      include: [{ model: Usuario }],
     });
   }
 
