@@ -13,6 +13,9 @@ export class Orden extends Model {
   @Column
   IdUsuario: number;
 
+  @Column
+  IdALGo: number
+
   @BelongsTo( () => Usuario, 'IdUsuario')
   usuario: Usuario
 }

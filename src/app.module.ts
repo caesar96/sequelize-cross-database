@@ -13,19 +13,6 @@ import { DatabaseModule } from './modules/database.module';
 @Module({
 	imports: [
 		ConfigModule.forRoot(),
-		// SequelizeModule.forRoot({
-		// 	name: 'global',
-		// 	dialect: 'mysql',
-		// 	host: 'localhost',
-		// 	username: 'root',
-		// 	password: 'fullmoon96',
-		// 	database: 'global',
-		// 	schema: 'global',
-		// 	// models: [Usuario],
-		// 	autoLoadModels: true,
-		// 	synchronize: true,
-		// 	// sync:{alter:true},
-		// }),
 		SequelizeModule.forRoot({
 			name: 'main',
 			dialect: 'mysql',
@@ -33,11 +20,10 @@ import { DatabaseModule } from './modules/database.module';
 			username: 'root',
 			password: 'fullmoon96',
 			// database: 'ecommerce',
-			schema: 'ecommerce',
 			// models: [Orden, Usuario],
 			autoLoadModels: true,
 			synchronize: true,
-			// sync:{alter:true},
+			sync:{alter:true},
 		}),
 		
 
