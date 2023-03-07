@@ -22,8 +22,8 @@ import { DatabaseModule } from './modules/database.module';
 			// database: 'ecommerce',
 			// models: [Orden, Usuario],
 			autoLoadModels: true,
-			synchronize: true,
-			sync:{alter:true},
+			// synchronize: true,
+			// sync:{alter:true},
 		}),
 		
 
