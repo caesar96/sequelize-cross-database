@@ -6,6 +6,8 @@ export const databaseProviders = [
 	{
 		provide: 'GLOBAL_SEQUELIZE',
 		useFactory: async () => {
+
+			// Usuario.hasMany(Orden, {foreignKey: 'IdUsuario', as: 'ordenes'})
 			const sequelize = new Sequelize({
 				dialect: 'mysql',
 				host: 'localhost',
@@ -13,23 +15,25 @@ export const databaseProviders = [
 				username: 'root',
 				password: 'fullmoon96',
 				database: 'global',
-				// schema: 'global'
+				models: [Usuario, Orden],
+				// schema: 'global',
 			});
+			// sequelize.getQueryInterface().showIndex()
 
 			//@ts-ignore
 			sequelize.dialect.supports.schemas = true;      
-			sequelize.addModels([Usuario]);
+			// sequelize.addModels([Usuario]);
 
-			// Usuario.hasMany(Orden, {foreignKey: 'IdUsuario', as: 'ordenes'})
+			// // Usuario.hasMany(Orden, {foreignKey: 'IdUsuario', as: 'ordenes'})
 			 
 			
 
-			sequelize.addModels([Orden])
+			// sequelize.addModels([Orden])
 
 
-			Usuario.hasMany(Orden, {foreignKey: 'IdUsuario', as: 'ordenes'})
+			
 
-			// await sequelize.sync();
+			// await sequelize.sync({alter: true});
 			return sequelize;
 		},
 	},
