@@ -7,7 +7,7 @@ import { EcommerceService } from '../services/ecommerce.service';
 
 @Module({
   imports: [
-    // SequelizeModule.forFeature([Usuario, Orden ], 'ecommerce'),
+    SequelizeModule.forFeature([Orden ], 'main'),
   ],
   providers: [EcommerceService],
   controllers: [EcommerceController],

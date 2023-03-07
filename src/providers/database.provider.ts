@@ -14,13 +14,13 @@ export const databaseProviders = [
 				port: 3306,
 				username: 'root',
 				password: 'fullmoon96',
-				database: 'global',
+				// database: 'global',
 				models: [Usuario, Orden],
 			});
 			// sequelize.getQueryInterface().showIndex()
 
 			//@ts-ignore
-			sequelize.dialect.supports.schemas = true;      
+			// sequelize.dialect.supports.schemas = true;      
 			// sequelize.addModels([Usuario]);
 
 			// // Usuario.hasMany(Orden, {foreignKey: 'IdUsuario', as: 'ordenes'})
@@ -32,7 +32,7 @@ export const databaseProviders = [
 
 			
 
-			// await sequelize.sync({alter: true});
+			await sequelize.sync({alter: true});
 			return sequelize;
 		},
 	},

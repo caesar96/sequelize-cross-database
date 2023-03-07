@@ -6,7 +6,7 @@ import { GlobalController } from '../controllers/global.controller';
 
 @Module({
   imports: [
-    // SequelizeModule.forFeature([Usuario], 'global'),
+    SequelizeModule.forFeature([Usuario], 'main'),
   ],
   providers: [GlobalService],
   controllers: [GlobalController],
